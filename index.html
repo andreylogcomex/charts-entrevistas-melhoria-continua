@@ -329,9 +329,6 @@ Highcharts.chart('container', {
             center: ['50%', '50%']
         }
     },
-    tooltip: {
-        valueSuffix: '%'
-    },
     series: [{
         name: 'Ponto há melhorar',
         data: browserData,
@@ -352,7 +349,7 @@ Highcharts.chart('container', {
             formatter: function () {
                 // display only if larger than 1
                 return this.y > 1 ? '<b>' + this.point.name + ':</b> ' +
-                    this.y + '%' : null;
+                    this.y + '' : null;
             }
         },
         id: 'versions'
